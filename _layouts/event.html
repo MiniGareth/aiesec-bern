@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="page event-page">
+  <div class="hero-image" style="background-image:url('{{ page.image | relative_url }}');"></div>
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p class="meta-row">
+      <span>{{ page.date | date: "%B %d, %Y" }}</span> &middot;
+      <span>{{ page.time }}</span> &middot;
+      <span>{{ page.location }}</span>
+    </p>
+    <div class="event-description">
+      {{ content }}
+    </div>
+
+    {% if page.signup_link %}
+    <a class="btn btn-primary" href="{{ page.signup_link }}" target="_blank" rel="noopener">Sign up</a>
+    {% endif %}
+
+    {% if page.related_events %}
+    <section class="related-events">
+      <h2>Related events</h2>
+      <div class="card-row">
+        {% for slug in page.related_events %}
+          {% assign rel = site.events | where: "slug", slug | first %}
+          {% if rel %}{% include event-card.html event=rel %}{% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</article>

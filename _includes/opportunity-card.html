@@ -1,0 +1,9 @@
+<!-- Reusable opportunity card include. Expects an `opp` variable. -->
+<a class="card opportunity-card" href="{{ opp.url | relative_url }}">
+  <div class="card-image" style="background-image:url('{{ opp.image | relative_url }}');"></div>
+  <div class="card-body">
+    <h4>{{ opp.name }}</h4>
+    <p class="card-meta">{{ opp.country }}</p>
+    <p class="card-meta">{{ opp.date_range }}</p>
+  </div>
+</a>

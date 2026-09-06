@@ -1,0 +1,41 @@
+<!-- ============================================================
+     FOOTER INCLUDE - exactly three sections as specified:
+     1) short description, 2) Main Pages (6 top-level items only),
+     3) Contact Us (email + social placeholders)
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-col footer-about">
+      <h3>AIESEC in Bern</h3>
+      <p>AIESEC in Bern is part of the world's largest youth-led organization, empowering young people
+      through leadership development and international exchange experiences.</p>
+    </div>
+
+    <div class="footer-col footer-pages">
+      <h3>Main Pages</h3>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Homepage</a></li>
+        <li><a href="{{ '/about-us/' | relative_url }}">About Us</a></li>
+        <li><a href="{{ '/events/' | relative_url }}">Events</a></li>
+        <li><a href="{{ '/exchanges/' | relative_url }}">Exchanges</a></li>
+        <li><a href="{{ '/participate/' | relative_url }}">Participate</a></li>
+        <li><a href="{{ '/contact-us/' | relative_url }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h3>Contact Us</h3>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <div class="social-links">
+        <!-- PLACEHOLDER: update site.social.instagram / linkedin in _config.yml -->
+        <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ site.time | date: '%Y' }} AIESEC in Bern. All rights reserved.</p>
+  </div>
+</footer>

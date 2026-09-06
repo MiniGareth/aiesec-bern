@@ -1,0 +1,9 @@
+<!-- Reusable event card include. Expects an `event` variable. -->
+<a class="card event-card" href="{{ event.url | relative_url }}">
+  <div class="card-image" style="background-image:url('{{ event.image | relative_url }}');"></div>
+  <div class="card-body">
+    <h4>{{ event.title }}</h4>
+    <p class="card-meta">{{ event.date | date: "%b %d, %Y" }} &middot; {{ event.time }}</p>
+    <p class="card-meta">{{ event.location }}</p>
+  </div>
+</a>

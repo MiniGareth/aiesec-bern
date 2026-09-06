@@ -1,0 +1,67 @@
+<!-- ============================================================
+     HEADER INCLUDE
+     Navigation follows the 2-level dropdown depth rule:
+     top-level items may have ONE dropdown level, no deeper.
+     Individual content instances (a single event/opportunity/
+     testimonial page) never appear here - only listing pages.
+     ============================================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="AIESEC in Bern Homepage">
+      <!-- PLACEHOLDER LOGO: replace assets/images/logo-placeholder.svg with the real logo -->
+      <img src="{{ '/assets/images/logo-placeholder.svg' | relative_url }}" alt="AIESEC in Bern logo" class="logo">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+
+        <li class="nav-item">
+          <a href="{{ '/' | relative_url }}">Homepage</a>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="{{ '/about-us/' | relative_url }}" class="dropdown-trigger">About Us</a>
+          <ul class="dropdown">
+            <li><a href="{{ '/about-us/' | relative_url }}">About AIESEC</a></li>
+            <li><a href="{{ '/about-us/members-and-board/' | relative_url }}">Members and Board</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="{{ '/events/' | relative_url }}" class="dropdown-trigger">Events</a>
+          <ul class="dropdown">
+            <li><a href="{{ '/events/' | relative_url }}">Upcoming</a></li>
+            <li><a href="{{ '/events/past/' | relative_url }}">Past</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="{{ '/exchanges/' | relative_url }}" class="dropdown-trigger">Exchanges</a>
+          <ul class="dropdown">
+            <li><a href="{{ '/exchanges/' | relative_url }}">How it works</a></li>
+            <li><a href="{{ '/exchanges/opportunities/' | relative_url }}">Available opportunities</a></li>
+            <li><a href="{{ '/exchanges/testimonials/' | relative_url }}">Testimonials</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="{{ '/participate/' | relative_url }}" class="dropdown-trigger">Participate</a>
+          <ul class="dropdown">
+            <li><a href="{{ '/participate/become-a-member/' | relative_url }}">Become a member</a></li>
+            <li><a href="{{ '/participate/conferences/' | relative_url }}">Conferences</a></li>
+            <li><a href="{{ '/participate/become-a-partner/' | relative_url }}">Become a partner</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ '/contact-us/' | relative_url }}">Contact Us</a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>

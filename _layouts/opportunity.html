@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="page opportunity-page">
+  <div class="hero-image" style="background-image:url('{{ page.image | relative_url }}');"></div>
+  <div class="container">
+    <h1>{{ page.name }}</h1>
+    <p class="meta-row">
+      <span>{{ page.country }}, {{ page.entity }}</span> &middot;
+      <span>{{ page.date_range }}</span> &middot;
+      <span>Responsible entity: {{ page.responsible_entity }}</span>
+    </p>
+    <p class="price-tag">Price: {{ page.price }}</p>
+    <div class="opportunity-description">
+      {{ content }}
+    </div>
+    <a class="btn btn-primary" href="{{ site.signup_link }}" target="_blank" rel="noopener">
+      Click here to find out more from us
+    </a>
+  </div>
+</article>

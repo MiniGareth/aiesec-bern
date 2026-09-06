@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="page testimonial-page">
+  <div class="container">
+    <div class="testimonial-header">
+      <img src="{{ page.images[0] | relative_url }}" alt="{{ page.name }}" class="testimonial-photo">
+      <div>
+        <h1>{{ page.name }}</h1>
+        <p class="meta-row">
+          <span>{{ page.project_name }}</span> &middot;
+          <span>{{ page.date | date: "%B %Y" }}</span> &middot;
+          <span>{{ page.responsible_entity }}</span>
+        </p>
+        <p class="quote">&ldquo;{{ page.quote }}&rdquo;</p>
+      </div>
+    </div>
+    <div class="testimonial-body">
+      {{ content }}
+    </div>
+    {% if page.images.size > 1 %}
+    <div class="testimonial-gallery">
+      {% for img in page.images offset: 1 %}
+        <img src="{{ img | relative_url }}" alt="{{ page.name }} photo">
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if page.related_link %}
+      <a class="btn btn-secondary" href="{{ page.related_link | relative_url }}">See related opportunity</a>
+    {% endif %}
+  </div>
+</article>

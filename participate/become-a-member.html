@@ -1,0 +1,53 @@
+---
+layout: default
+title: Become a Member
+description: "Join AIESEC in Bern and pick the department that matches your interests."
+permalink: /participate/become-a-member/
+---
+<section class="hero-image become-member-hero" style="background-image:url('{{ '/assets/images/become-member-hero-placeholder.jpg' | relative_url }}');">
+  <h1>Become a member</h1>
+</section>
+
+<section class="department-picker container">
+  <h2>Be part of 1 of the departments</h2>
+  <div class="department-grid" id="departmentGrid">
+    <div class="department-item" data-title="Marketing" data-desc="Craft the AIESEC in Bern brand, run social media campaigns, and design promotional materials that connect us with new members and exchange participants.">
+      <div class="department-icon" aria-hidden="true">&#128241;</div>
+      <p>Marketing</p>
+    </div>
+    <div class="department-item" data-title="Finance and Legalities" data-desc="Manage the organization's budget, sponsorships, and legal compliance to keep AIESEC in Bern financially healthy and transparent.">
+      <div class="department-icon" aria-hidden="true">&#128176;</div>
+      <p>Finance and Legalities</p>
+    </div>
+    <div class="department-item" data-title="Outgoing Exchange" data-desc="Support young people from Bern in finding and preparing for international internships and volunteer experiences abroad.">
+      <div class="department-icon" aria-hidden="true">&#9992;</div>
+      <p>Outgoing Exchange</p>
+    </div>
+    <div class="department-item" data-title="Business Development" data-desc="Build partnerships with companies and organizations that host exchange participants or sponsor our activities.">
+      <div class="department-icon" aria-hidden="true">&#129309;</div>
+      <p>Business Development</p>
+    </div>
+    <div class="department-item" data-title="Membership Experience" data-desc="Design the onboarding, training, and community events that make being a member of AIESEC in Bern memorable.">
+      <div class="department-icon" aria-hidden="true">&#127881;</div>
+      <p>Membership Experience</p>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="departmentLightbox" aria-hidden="true">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <h3 id="lightboxTitle"></h3>
+    <p id="lightboxDesc"></p>
+  </div>
+</div>
+
+<section class="closing-motivation container">
+  <div class="motivation-lines">
+    <p>Make new memories.</p>
+    <p>Make new experiences.</p>
+    <p>Meet new people.</p>
+    <p>Grow and develop.</p>
+  </div>
+  <a class="btn btn-primary" href="{{ site.signup_link }}" target="_blank" rel="noopener">Apply now</a>
+</section>

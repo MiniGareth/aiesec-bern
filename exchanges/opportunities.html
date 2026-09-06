@@ -1,0 +1,36 @@
+---
+layout: default
+title: Available Opportunities
+description: "Explore AIESEC in Bern's available international exchange opportunities."
+permalink: /exchanges/opportunities/
+---
+<article class="page opportunities-page container">
+  <h1>Available Opportunities</h1>
+  <p class="hint">Expand a country and city/entity to see opportunities, sorted chronologically.</p>
+  <div id="opportunitiesTree">
+    {% assign countries = site.opportunities | map: "country" | uniq | sort %}
+    {% for country in countries %}
+    <details class="opp-country">
+      <summary>{{ country }}</summary>
+      {% assign country_opps = site.opportunities | where: "country", country %}
+      {% assign entities = country_opps | map: "entity" | uniq | sort %}
+      {% for entity in entities %}
+      <details class="opp-entity">
+        <summary>{{ entity }}</summary>
+        {% assign entity_opps = country_opps | where: "entity", entity | sort: "date_start" %}
+        {% for opp in entity_opps %}
+        <div class="opp-item">
+          <div class="opp-item-body">
+            <h4><a href="{{ opp.url | relative_url }}">{{ opp.name }}</a></h4>
+            <p class="card-meta">{{ opp.date_range }} &middot; {{ opp.responsible_entity }}</p>
+            <p class="event-short-desc">{{ opp.description | truncatewords: 25 }}</p>
+          </div>
+          <div class="opp-item-image" style="background-image:url('{{ opp.image | relative_url }}');"></div>
+        </div>
+        {% endfor %}
+      </details>
+      {% endfor %}
+    </details>
+    {% endfor %}
+  </div>
+</article>

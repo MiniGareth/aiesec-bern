@@ -1,0 +1,20 @@
+---
+layout: default
+title: Testimonials
+description: "Hear from participants about their AIESEC in Bern exchange experiences."
+permalink: /exchanges/testimonials/
+---
+<article class="page testimonials-page container">
+  <h1>Testimonials</h1>
+  <div class="testimonial-grid">
+    {% for t in site.testimonials %}
+    <a class="testimonial-box" href="{{ t.url | relative_url }}">
+      <img src="{{ t.images[0] | relative_url }}" alt="{{ t.name }}">
+      <h4>{{ t.name }}</h4>
+      <p class="card-meta">{{ t.project_name }} &middot; {{ t.date | date: "%B %Y" }}</p>
+      <p class="card-meta">{{ t.responsible_entity }}</p>
+      <p class="quote">&ldquo;{{ t.quote }}&rdquo;</p>
+    </a>
+    {% endfor %}
+  </div>
+</article>

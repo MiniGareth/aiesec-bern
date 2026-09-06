@@ -1,0 +1,67 @@
+# ============================================================
+# SITE CONFIGURATION
+# PLACEHOLDER: title, description, url, and domain below are
+# placeholders. Moderator should replace with real values once
+# the custom domain and branding are finalized.
+# ============================================================
+title: "AIESEC in Bern"
+description: "AIESEC in Bern - youth leadership development and global exchange opportunities."
+# PLACEHOLDER: replace with the real custom domain once DNS is configured
+url: "https://www.aiesec-bern-placeholder.ch"
+baseurl: ""
+
+# PLACEHOLDER contact info - update once confirmed by the moderator
+email: "info.be@aiesec.ch"
+social:
+  instagram: "https://instagram.com/PLACEHOLDER_AIESEC_BERN"
+  linkedin: "https://www.linkedin.com/company/PLACEHOLDER_AIESEC_BERN"
+
+# PLACEHOLDER external sign-up / apply form link.
+# Used on: Exchanges flowchart CTA, Opportunity page button,
+# Become a Member "Apply now" button.
+signup_link: "https://aiesec.org/PLACEHOLDER_SIGNUP_FORM"
+
+# PLACEHOLDER office address
+office_address: "PLACEHOLDER Street 1, 3000 Bern, Switzerland"
+
+future: true
+
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
+  opportunities:
+    output: true
+    permalink: /exchanges/opportunities/:path/
+  testimonials:
+    output: true
+    permalink: /exchanges/testimonials/:path/
+  members:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "opportunities"
+    values:
+      layout: "opportunity"
+  - scope:
+      path: ""
+      type: "testimonials"
+    values:
+      layout: "testimonial"
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

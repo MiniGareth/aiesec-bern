@@ -1,0 +1,55 @@
+---
+layout: default
+title: Home
+description: "AIESEC in Bern - discover our community, events, and global exchange opportunities."
+permalink: /
+---
+<section class="hero-carousel" id="heroCarousel">
+  <!-- PLACEHOLDER hero images: replace assets/images/hero-*.jpg -->
+  <div class="hero-slide active" style="background-image:url('{{ '/assets/images/hero-1-placeholder.jpg' | relative_url }}');">
+    <h1>Welcome to AIESEC in Bern</h1>
+  </div>
+  <div class="hero-slide" style="background-image:url('{{ '/assets/images/hero-2-placeholder.jpg' | relative_url }}');">
+    <h1>Where the work meets passion</h1>
+  </div>
+  <div class="hero-slide" style="background-image:url('{{ '/assets/images/hero-3-placeholder.jpg' | relative_url }}');">
+    <h1>Where growth meets fun</h1>
+  </div>
+  <div class="hero-slide" style="background-image:url('{{ '/assets/images/hero-4-placeholder.jpg' | relative_url }}');">
+    <h1>Where you make friends</h1>
+  </div>
+  <button class="carousel-prev" aria-label="Previous slide">&#8249;</button>
+  <button class="carousel-next" aria-label="Next slide">&#8250;</button>
+</section>
+
+<section class="membership-teaser container">
+  <p class="subtitle">Learn more about what it means to be part of the community</p>
+  <a class="btn btn-primary" href="{{ '/participate/become-a-member/' | relative_url }}">Become a Member</a>
+</section>
+
+<section class="home-events container">
+  <h2>Upcoming events</h2>
+  <div class="scroll-row-wrapper">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">&#8249;</button>
+    <div class="scroll-row" id="homeEventsRow">
+      {% assign upcoming_events = site.events | sort: "date" %}
+      {% for event in upcoming_events limit: 6 %}
+        {% include event-card.html event=event %}
+      {% endfor %}
+    </div>
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">&#8250;</button>
+  </div>
+</section>
+
+<section class="home-opportunities container">
+  <h2>Opportunities abroad</h2>
+  <div class="scroll-row-wrapper">
+    <button class="scroll-btn scroll-left" aria-label="Scroll left">&#8249;</button>
+    <div class="scroll-row" id="homeOppRow">
+      {% for opp in site.opportunities limit: 6 %}
+        {% include opportunity-card.html opp=opp %}
+      {% endfor %}
+    </div>
+    <button class="scroll-btn scroll-right" aria-label="Scroll right">&#8250;</button>
+  </div>
+</section>

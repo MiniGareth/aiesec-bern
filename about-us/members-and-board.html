@@ -1,0 +1,19 @@
+---
+layout: default
+title: Members and Board
+description: "Meet the team behind AIESEC in Bern."
+permalink: /about-us/members-and-board/
+---
+<article class="page members-page container">
+  <h1>Members and Board</h1>
+  <div class="member-grid">
+    {% for member in site.members %}
+    <div class="member-card">
+      <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
+      <h4>{{ member.name }}</h4>
+      <p>{{ member.position }}</p>
+      <p class="member-department">{{ member.department }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</article>
