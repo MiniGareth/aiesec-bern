@@ -8,8 +8,8 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="AIESEC in Bern Homepage">
-      <!-- PLACEHOLDER LOGO: replace assets/images/logo-placeholder.svg with the real logo -->
-      <img src="{{ '/assets/images/logo-placeholder.svg' | relative_url }}" alt="AIESEC in Bern logo" class="logo">
+      <img src="{{ '/assets/images/Bear Bern logo.png' | relative_url }}" alt="AIESEC in Bern logo" class="logo">
+      <span class="logo-text">AIESEC in Bern</span>
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -18,11 +18,6 @@
 
     <nav class="main-nav" id="mainNav">
       <ul class="nav-list">
-
-        <li class="nav-item">
-          <a href="{{ '/' | relative_url }}">Homepage</a>
-        </li>
-
         <li class="nav-item has-dropdown">
           <a href="{{ '/about-us/' | relative_url }}" class="dropdown-trigger">About Us</a>
           <ul class="dropdown">
@@ -52,15 +47,19 @@
           <a href="{{ '/participate/' | relative_url }}" class="dropdown-trigger">Participate</a>
           <ul class="dropdown">
             <li><a href="{{ '/participate/become-a-member/' | relative_url }}">Become a member</a></li>
-            <li><a href="{{ '/participate/conferences/' | relative_url }}">Conferences</a></li>
             <li><a href="{{ '/participate/become-a-partner/' | relative_url }}">Become a partner</a></li>
+            <li><a href="{{ '/participate/conferences/' | relative_url }}">Conferences</a></li>
           </ul>
         </li>
 
         <li class="nav-item">
           <a href="{{ '/contact-us/' | relative_url }}">Contact Us</a>
         </li>
-
+        <li class="nav-item aiesec-logo-item">
+          <a href="https://www.aiesec.org" aria-label="AIESEC Global Website">
+            <img src="{{ '/assets/images/Blue-logo.png' | relative_url }}" alt="AIESEC" class="aiesec-global-logo">
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
