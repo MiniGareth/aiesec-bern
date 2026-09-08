@@ -152,7 +152,10 @@ img { max-width: 100%; display: block; }
 .card-meta { font-size: 0.85rem; color: #666; margin: 2px 0; }
 
 /* ---------- About / member grid ---------- */
-.about-image { margin: 20px 0; border-radius: 8px; }
+.about-image { 
+  margin: 20px 0; border-radius: 8px; 
+  width: 40rem;
+}
 .member-grid, .department-grid, .participate-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 20px;
 }
@@ -237,6 +240,13 @@ img { max-width: 100%; display: block; }
 .lightbox-content { background: #fff; padding: 30px; border-radius: 8px; max-width: 480px; position: relative; }
 .lightbox-close { position: absolute; top: 8px; right: 14px; background: none; border: none; font-size: 1.6rem; cursor: pointer; }
 
+/* ---------- Lightbox ---------- */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ============================================================
    RESPONSIVE (mobile-first equivalents)
    ============================================================ */
@@ -273,3 +283,4 @@ img { max-width: 100%; display: block; }
   .benefit-callouts { flex-direction: column; }
   .hero-slide h1 { font-size: 1.6rem; }
 }
+
