@@ -195,7 +195,38 @@ img { max-width: 100%; display: block; }
 .callout { text-align: center; flex: 1; }
 .callout-icon { font-size: 2.4rem; }
 .flow-section { padding: 40px 0; text-align: center; }
-.flow-chart { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 20px 0; }
+.flow-chart-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 20px 0;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+.flow-chart-container::-webkit-scrollbar {
+  height: 8px;
+}
+.flow-chart-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.flow-chart-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Mermaid diagram styling */
+#flowchart {
+  text-align: left;
+  font-family: "trebuchet ms", verdana, arial, sans-serif;
+}
+#flowchart svg {
+  max-width: 1200px;
+  min-width: 600px;
+  width: 100%;
+  height: auto;
+}
 .flow-step {
   background: var(--color-light); border: 1px solid #ddd; border-radius: 8px;
   padding: 14px 20px; max-width: 480px;

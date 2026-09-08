@@ -4,6 +4,10 @@ title: How It Works
 description: "Learn how to go abroad with AIESEC in Bern."
 permalink: /exchanges/
 ---
+<!-- Load Mermaid.js for flowchart rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: false, theme: 'dark' });</script>
+
 <section class="hero-carousel exchanges-hero" id="exchangesHeroCarousel">
   <!-- PLACEHOLDER hero images -->
   <div class="hero-slide active" style="background-image:url('{{ '/assets/images/exchanges-hero-1-placeholder.jpg' | relative_url }}');">
@@ -33,20 +37,59 @@ permalink: /exchanges/
 
 <section class="flow-section container">
   <h2>Your journey, step by step</h2>
-  <div class="flow-chart">
-    <div class="flow-step">Interested in going abroad?</div>
-    <div class="flow-branches">
-      <div class="flow-step">Saw an opportunity you liked?</div>
-      <div class="flow-step">A place you are interested in isn't there?</div>
-      <div class="flow-step">Looking for a specific type of opportunity that isn't there?</div>
-    </div>
-    <div class="flow-step flow-highlight">Sign up! We will reach out soon / find something for you</div>
-    <div class="flow-step">Get a call from us</div>
-    <div class="flow-step">Have a meeting with us to assess your needs and compatibility</div>
-    <div class="flow-step">Apply for the project</div>
-    <div class="flow-step">Get accepted</div>
-    <div class="flow-step">Get a briefing from us</div>
-    <div class="flow-step flow-highlight">Then off you go!</div>
+  <div class="flow-chart-container">
+    <div id="flowchart" class="mermaid">
+      flowchart TD
+        A[Interested in going abroad?] --> B{Saw an opportunity you liked?}
+        A --> C{A place you are interested in isn't there?}
+        A --> D{Looking for a specific type of opportunity that isn't there?}
+        
+        B -->|Yes| E[Sign up! We will reach out soon]
+        C -->|Yes| E
+        D -->|Yes| F[Sign up! We will find something for you]
+        
+        E --> G[Get a call from us]
+        F --> G
+        G --> H[Have a meeting with us to assess your needs and compatibility]
+        H --> I[Apply for the project]
+        I --> J[Get accepted]
+        J --> K[Get a briefing from us]
+        K --> L[Then off you go!]
+        
+        click E "#" "Sign up now"
+        click F "#" "Sign up now"
+        
+        classDef nodeStyle fill:#27272b,stroke:#d8d8d4,stroke-width:1px,color:#ffffff,font-family:"trebuchet ms",verdana,arial,sans-serif;
+        classDef highlightNode fill:#037ef3,stroke:#004785,stroke-width:1px,color:#ffffff,font-family:"trebuchet ms",verdana,arial,sans-serif;
+        classDef decisionNode fill:#3d3d43,stroke:#d8d8d4,stroke-width:1px,color:#ffffff,font-family:"trebuchet ms",verdana,arial,sans-serif;
+        
+        class A nodeStyle
+        class B,C,D decisionNode
+        class E,F highlightNode
+        class G,H,I,J,K nodeStyle
+        class L highlightNode
   </div>
   <a class="btn btn-primary" href="{{ site.signup_link }}" target="_blank" rel="noopener">Sign up now</a>
 </section>
+
+<script>
+  // Render the mermaid diagram after page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const flowchartEl = document.getElementById('flowchart');
+    if (flowchartEl) {
+      mermaid.run({
+        nodes: [flowchartEl],
+        postRender: function(id, svg) {
+          // Add click handlers for sign up nodes
+          const signUpNodes = svg.querySelectorAll('g[node-id*="E"], g[node-id*="F"]');
+          signUpNodes.forEach(node => {
+            node.style.cursor = 'pointer';
+            node.addEventListener('click', function() {
+              window.location.href = '{{ site.signup_link }}';
+            });
+          });
+        }
+      });
+    }
+  });
+</script>
