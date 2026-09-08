@@ -94,7 +94,11 @@ img { max-width: 100%; display: block; }
   display: inline-block; padding: 12px 24px; border-radius: 4px;
   font-weight: 600; margin-top: 16px; cursor: pointer; border: none;
 }
-.btn-primary { background: var(--color-primary); color: #fff; }
+.btn-primary { 
+  background: var(--color-primary); 
+  color: #fff;
+  font-size:xx-large
+}
 .btn-primary:hover { background: #025bb5; }
 .btn-secondary { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
 
@@ -192,8 +196,18 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Exchanges: benefits + flowchart ---------- */
 .benefit-callouts { display: flex; justify-content: space-around; padding: 40px 0; gap: 20px; }
-.callout { text-align: center; flex: 1; }
-.callout-icon { font-size: 2.4rem; }
+.callout {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.callout-icon { 
+  width: 3rem;
+  height: 3rem;
+ }
 .flow-section { padding: 40px 0; text-align: center; }
 .flow-step {
   background: var(--color-light); border: 1px solid #ddd; border-radius: 8px;
