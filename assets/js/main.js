@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".department-item").forEach(function (item) {
     var color = item.getAttribute("data-color");
     if (color) item.style.setProperty("--dept-color", color);
+    var onColor = item.getAttribute("data-on-color");
+    if (onColor) item.style.setProperty("--dept-on-color", onColor);
     item.addEventListener("click", function () {
       if (!lightbox) return;
       lightboxTitle.textContent = item.getAttribute("data-title");
@@ -104,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
       lightboxImage.style.backgroundImage = imageSrc ? "url('" + imageSrc + "')" : "";
       var color = item.getAttribute("data-color");
       if (color) lightbox.style.setProperty("--dept-color", color);
+      var light = item.getAttribute("data-light");
+      lightbox.style.setProperty("--dept-light", light || "#fff");
       var textColor = item.getAttribute("data-text-color") || color;
       if (textColor) lightboxTitle.style.color = textColor;
       lightbox.classList.add("active");
