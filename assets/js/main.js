@@ -91,12 +91,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var lightbox = document.getElementById("departmentLightbox");
   var lightboxTitle = document.getElementById("lightboxTitle");
   var lightboxDesc = document.getElementById("lightboxDesc");
+  var lightboxImage = document.getElementById("lightboxImage");
   var lightboxClose = document.getElementById("lightboxClose");
   document.querySelectorAll(".department-item").forEach(function (item) {
+    var color = item.getAttribute("data-color");
+    if (color) item.style.setProperty("--dept-color", color);
     item.addEventListener("click", function () {
       if (!lightbox) return;
       lightboxTitle.textContent = item.getAttribute("data-title");
       lightboxDesc.innerHTML = item.getAttribute("data-desc");
+      var imageSrc = item.getAttribute("data-image");
+      lightboxImage.style.backgroundImage = imageSrc ? "url('" + imageSrc + "')" : "";
+      var color = item.getAttribute("data-color");
+      if (color) lightbox.style.setProperty("--dept-color", color);
+      var textColor = item.getAttribute("data-text-color") || color;
+      if (textColor) lightboxTitle.style.color = textColor;
       lightbox.classList.add("active");
       lightbox.setAttribute("aria-hidden", "false");
     });
