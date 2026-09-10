@@ -24,6 +24,12 @@ signup_link: "https://tally.so/r/A7MOvk"
 # PLACEHOLDER office address
 office_address: "Schanzenstrasse 1, 3012 Bern, Switzerland"
 
+# Image variables
+conference_hero_img: "/assets/images/kick-off-0.jpeg"
+membership_hero_img: "/assets/images/post-kick-off-trip.png"
+partnership_hero_img: "/assets/images/redbull-sdgs.JPG"
+exchange_hero_img: "/assets/images/ogx flyers.JPG"
+
 future: true
 
 collections:
