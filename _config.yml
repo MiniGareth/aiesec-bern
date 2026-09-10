@@ -6,9 +6,10 @@
 # ============================================================
 title: "AIESEC in Bern"
 description: "AIESEC in Bern - youth leadership development and global exchange opportunities."
-# PLACEHOLDER: replace with the real custom domain once DNS is configured
-url: "https://www.aiesecbern.ch"
-baseurl: "aiesec-bern"
+# Default GitHub Pages URL (project page served under /aiesec-bern/).
+# Switch to a custom domain later: set url to https://www.aiesecbern.ch and baseurl to ""
+url: "https://minigareth.github.io"
+baseurl: "/aiesec-bern"
 
 # PLACEHOLDER contact info - update once confirmed by the moderator
 email: "info.be@aiesec.ch"
