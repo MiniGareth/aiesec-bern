@@ -8,7 +8,7 @@ title: "AIESEC in Bern"
 description: "AIESEC in Bern - youth leadership development and global exchange opportunities."
 # PLACEHOLDER: replace with the real custom domain once DNS is configured
 url: "https://www.aiesecbern.ch"
-baseurl: ""
+baseurl: "aiesec-bern"
 
 # PLACEHOLDER contact info - update once confirmed by the moderator
 email: "info.be@aiesec.ch"
