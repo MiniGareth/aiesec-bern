@@ -32,8 +32,15 @@ permalink: /
   <div class="scroll-row-wrapper">
     <button class="scroll-btn scroll-left" aria-label="Scroll left">&#8249;</button>
     <div class="scroll-row" id="homeEventsRow">
-      {% assign events = site.events | sort: "date" %}
-      {% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" %}
+      {% assign today_str = site.time | date: "%Y-%m-%d" %}
+
+      {% assign upcoming_events = "" | split: ',' %}
+      {% for event in site.events %}
+        {% assign event_date = event.date | date: "%Y-%m-%d" %}
+        {% if event_date >= today_str %}
+          {% assign upcoming_events = upcoming_events | push: event %}
+        {% endif %}
+      {% endfor %}
       {% for event in upcoming_events limit: 6 %}
         {% include event-card.html event=event %}
       {% endfor %}
@@ -47,10 +54,17 @@ permalink: /
   <div class="scroll-row-wrapper">
     <button class="scroll-btn scroll-left" aria-label="Scroll left">&#8249;</button>
     <div class="scroll-row" id="homeOppRow">
-      {% assign upcoming_opportunities = site.opportunities | where_exp: "opportunity", "opportunity.date_start >= site.time" %}
+      {% assign upcoming_opportunities = "" | split: ',' %}
+      {% for opp in site.opportunities %}
+        {% assign opp_date = opp.date_start | date: "%Y-%m-%d" %}
+        {% if opp_date >= today_str %}
+          {% assign upcoming_opportunities = upcoming_opportunities | push: opp %}
+        {% endif %}
+      {% endfor %}
       {% for opp in upcoming_opportunities limit: 6 %}
         {% include opportunity-card.html opp=opp %}
       {% endfor %}
+
     </div>
     <button class="scroll-btn scroll-right" aria-label="Scroll right">&#8250;</button>
   </div>
