@@ -3,8 +3,8 @@ name: "TUE MINH EDUCATION"
 country: "Vietnam"
 entity: "AIESEC in Vietnam"
 responsible_entity: "AIESEC in HCMC"
-date_start: 2027-09-01
-date_range: "January - March 2027"
+date_start: 2026-09-30
+date_range: "September - October 2026"
 price: "CHF 390 (program fee, excludes flights)"
 image: /assets/images/opportunities/HCMC-1.jpeg
 ---
