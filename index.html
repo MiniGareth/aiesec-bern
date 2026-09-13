@@ -47,7 +47,8 @@ permalink: /
   <div class="scroll-row-wrapper">
     <button class="scroll-btn scroll-left" aria-label="Scroll left">&#8249;</button>
     <div class="scroll-row" id="homeOppRow">
-      {% for opp in site.opportunities limit: 6 %}
+      {% assign upcoming_opportunities = site.opportunities | where_exp: "opportunity", "opportunity.date >= site.time" %}
+      {% for opp in upcoming_opportunities limit: 6 %}
         {% include opportunity-card.html opp=opp %}
       {% endfor %}
     </div>
