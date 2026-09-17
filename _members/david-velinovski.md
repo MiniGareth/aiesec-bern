@@ -2,5 +2,5 @@
 name: "David Velinovski"
 position: "Local Committee Vice-President"
 department: "Business Development, Engage with AIESEC"
-photo: /assets/images/
+photo: /assets/images/members/david 1.jpg
 ---
