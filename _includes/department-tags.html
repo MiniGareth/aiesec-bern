@@ -9,8 +9,8 @@
 {% assign dept_list = include.departments | split: "," %}
 <span class="department-tags">
   {% for dept in dept_list %}
-    {% assign dept = dept | strip %}
-    {% case dept %}
+    {% assign dept_name = dept | strip %}
+    {% case dept_name %}
       {% when "Marketing" %}
         {% assign bg = "#7552cc" %}{% assign fg = "#ffffff" %}
       {% when "Finance and Legalities" %}
@@ -26,6 +26,6 @@
       {% else %}
         {% assign bg = "#037ef3" %}{% assign fg = "#ffffff" %}
     {% endcase %}
-    <span class="dept-tag" style="background-color: {{ bg }}; color: {{ fg }};">{{ dept }}</span>
+    <span class="dept-tag" style="background-color: {{ bg }}; color: {{ fg }};">{{ dept_name }}</span>
   {% endfor %}
 </span>
