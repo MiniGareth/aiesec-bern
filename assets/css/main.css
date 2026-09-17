@@ -177,6 +177,11 @@ img { max-width: 100%; display: block; }
 }
 .member-card { text-align: center; background: var(--color-light); padding: 16px; border-radius: 8px; }
 .member-card img { border-radius: 50%; width: 100px; height: 100px; object-fit: cover; margin: 0 auto 10px; }
+.member-card p { margin: 4px 0; }
+
+/* Member department tags (colours match the Become a Member page) */
+.department-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }
+.dept-tag { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; line-height: 1.2; white-space: nowrap; }
 
 /* ---------- Event / opportunity list rows ---------- */
 .event-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }

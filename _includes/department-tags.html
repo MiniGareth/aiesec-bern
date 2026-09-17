@@ -1,0 +1,31 @@
+{% comment %}
+  Renders a member's comma-separated `department` string as coloured tags.
+  Department colours mirror those defined on the Become a Member page
+  (participate/become-a-member.html). Departments not listed there fall
+  back to the site's primary brand colour.
+
+  Usage: {% include department-tags.html departments=member.department %}
+{% endcomment %}
+{% assign dept_list = include.departments | split: "," %}
+<span class="department-tags">
+  {% for dept in dept_list %}
+    {% assign dept = dept | strip %}
+    {% case dept %}
+      {% when "Marketing" %}
+        {% assign bg = "#7552cc" %}{% assign fg = "#ffffff" %}
+      {% when "Finance and Legalities" %}
+        {% assign bg = "#12c273" %}{% assign fg = "#ffffff" %}
+      {% when "Outgoing Exchange" %}
+        {% assign bg = "#f65a43" %}{% assign fg = "#ffffff" %}
+      {% when "Business Development" %}
+        {% assign bg = "#fecc61" %}{% assign fg = "#5a4310" %}
+      {% when "Engage with AIESEC" %}
+        {% assign bg = "#fecc61" %}{% assign fg = "#5a4310" %}
+      {% when "Membership Experience" %}
+        {% assign bg = "#84ddfe" %}{% assign fg = "#15516b" %}
+      {% else %}
+        {% assign bg = "#037ef3" %}{% assign fg = "#ffffff" %}
+    {% endcase %}
+    <span class="dept-tag" style="background-color: {{ bg }}; color: {{ fg }};">{{ dept }}</span>
+  {% endfor %}
+</span>
