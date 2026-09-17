@@ -188,13 +188,10 @@ img { max-width: 100%; display: block; }
   line-height: 28px;
   padding: 0 18px 0 22px;
   border-radius: 4px 0 0 4px;
-  background: var(--dept-bg, #037ef3);
-  color: var(--dept-fg, #fff);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   white-space: nowrap;
-  transition: color 0s;
 }
 .dept-tag::after {
   content: "";
@@ -204,7 +201,6 @@ img { max-width: 100%; display: block; }
   border-top: 14px solid transparent;
   border-bottom: 14px solid transparent;
   border-left: 9px solid var(--dept-bg, #037ef3);
-  background: #fff;
 }
 .dept-tag::before {
   content: "";
