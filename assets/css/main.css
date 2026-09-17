@@ -186,7 +186,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   height: 28px;
   line-height: 28px;
-  padding: 0 18px 0 22px;
+  padding: 0 14px 0 22px;
   border-radius: 4px 0 0 4px;
   font-size: 0.78rem;
   font-weight: 600;
@@ -197,7 +197,9 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: -9px;
+  width: 0;
+  height: 0;
   border-top: 14px solid transparent;
   border-bottom: 14px solid transparent;
   border-left: 9px solid var(--dept-bg, #037ef3);
