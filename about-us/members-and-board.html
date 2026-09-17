@@ -12,7 +12,7 @@ permalink: /about-us/members-and-board/
       <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
       <h4>{{ member.name }}</h4>
       <p>{{ member.position }}</p>
-      <p class="member-department">{{ member.department }}</p>
+      {% include department-tags.html departments=member.department %}
     </div>
     {% endfor %}
   </div>
