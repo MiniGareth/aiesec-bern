@@ -1,7 +1,7 @@
 # AIESEC in Bern - Website (Jekyll)
 
 ## What this is
-A static Jekyll site for AIESEC in Bern.
+A static Jekyll site for AIESEC in Bern: www.aiesecbern.ch
 It is designed to be edited by a **non-technical moderator** through plain Markdown files with front matter -
 no coding required for day-to-day content updates.
 
