@@ -1,6 +1,6 @@
 ---
 title: "Global Village 2026"
-date: 2026-10-08
+date: 2026-10-09
 time: "11:30 - 17:30"
 location: "Unitobler, Bern"
 image: /assets/images/events/glovil 2026 announcement post changed.png
