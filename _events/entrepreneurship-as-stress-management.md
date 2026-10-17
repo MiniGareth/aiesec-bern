@@ -23,6 +23,5 @@ Work on a case study where instead of entrepreneurship driven solely by ambition
 <br><br>
 Come and meet pioneering  people, open your mind and learn something new!
 <br>
-Register up now with QR code or link in bio
 <br> 
 <img src="/assets/images/events/entrepreneurship as stress management poster.png" alt="Entrepreneurship as Stress Management Poster" width="500">
