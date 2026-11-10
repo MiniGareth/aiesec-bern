@@ -1,6 +1,6 @@
 ---
 title: "Laugh with Imapct 2026"
-date: 2001-11-12
+date: 2026-12-13
 time: ""
 location: ""
 image: 
